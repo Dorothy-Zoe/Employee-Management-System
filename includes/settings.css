@@ -1,0 +1,346 @@
+
+        /* Additional styles for settings page */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .tab {
+            padding: 15px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+            cursor: pointer;
+        }
+        
+        .tab.active {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+        }
+        
+        .tab:hover:not(.active) {
+            color: #4b5563;
+        }
+        
+        .settings-content {
+            padding: 24px;
+            display: none;
+        }
+        
+        .settings-content.active {
+            display: block;
+        }
+        
+        .setting-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #dc2626;
+            margin-bottom: 24px;
+        }
+        
+        .setting-item {
+            margin-bottom: 32px;
+        }
+        
+        .setting-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .setting-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #111827;
+        }
+        
+        .setting-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: #22c55e;
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        
+        .preferences {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 24px;
+            margin-top: 24px;
+        }
+        
+        .preference-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .preference-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-right: 12px;
+        }
+        
+        .save-button {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 16px;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .save-button:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Account Settings Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .form-column {
+            flex: 1;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #f9fafb;
+        }
+        
+        .input-field:read-only {
+            background-color: #f9fafb;
+            color: #6b7280;
+        }
+        
+        .input-field:not(:read-only) {
+            background-color: #ffffff;
+        }
+        
+        .edit-profile-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #dc2626;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .edit-profile-button:hover {
+            background-color: #b91c1c;
+        }
+        
+        .password-section {
+            margin-top: 32px;
+        }
+        
+        .forgot-password {
+            font-size: 14px;
+            color: #2563eb;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        /* Privacy Settings Styles */
+        .privacy-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #dc2626;
+            margin-bottom: 16px;
+        }
+
+        
+/* Eye Icon
+.toggle-password {
+    position: absolute;
+    right: 52px;
+    bottom: 19.5%;
+    transform: translateY(-50%);
+    width: 24px;  /* Adjust size */
+    /* height: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+} */
+
+/* .toggle-password:hover {
+    opacity: 1;
+}         */ 
+
+
+/* Forgot Password */
+/* Redirect Text */
+.redirect-text {
+    margin-top: 15px;
+}
+
+/* Ensure the text inside the <p> tag does not add extra spacing */
+.redirect-text p {
+    margin: 0;
+}
+
+/* Force the link color to always be white */
+.redirect-text a,
+.redirect-text a:visited,
+.redirect-text a:active,
+.redirect-text a:focus {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.redirect-text a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Modal Background */
+.modalTitle {
+    color: black;
+}
+
+.FPmodal {
+    display: none; /* Ensures the modal is hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Box */
+.fmodal-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: #ff4757;
+}
+
+/* Input Fields */
+.fmodal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Button Styling */
+.fmodal-content button {
+    width: 100%;
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.fmodal-content button:hover {
+    background: #e84118;
+}
+
+.resetpassword {
+    color: black;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: -7px;
+    margin-top: 10px;
+    margin-left: 31px;
+}
