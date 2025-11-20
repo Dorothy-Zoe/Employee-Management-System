@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="src/favicon-logo.ico">
+    <title>Taguig City University Portal</title>
+    <link rel="stylesheet" href="includes/portal.css">
+</head>
+<body>
+    <img src="src/tcu-bg.png" alt="Background Image" class="bg-image">
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <img src="src/tcu-logo.png" alt="Taguig City University Logo" class="logo">
+        <h1>Taguig City University</h1>
+        <h2>Portal</h2>
+        <div class="buttons">
+            <button class="btn" onclick="redirectTo('admin.php')">Administrator</button>
+            <button class="btn" onclick="redirectTo('hr/hr.php')">HR</button>
+            <button class="btn" onclick="redirectTo('faculty/instructor.php')">Instructor</button>
+        </div>
+    </div>
+
+    <script src="includes/portal.js"></script>
+</body>
+</html>

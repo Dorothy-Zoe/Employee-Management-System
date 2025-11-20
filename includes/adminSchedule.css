@@ -1,0 +1,490 @@
+/* Modal Background */
+/* Ensure modal is hidden by default */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Box */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Form Layout */
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Form Fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Modal Footer Buttons */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background: #f0f0f0;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Save Schedule Button */
+.save-btn {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add Schedule Button */
+.add-schedule-btn {
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/*MSG*/
+.success-alert {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+.error-alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Icon style */
+.icon-settings-header {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-settings-header:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Nofication CSS */
+
+
+/* Dropdown container */
+.notif-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Notification icon style */
+.icon-notification {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-notification:hover {
+    transform: scale(1.1);
+}
+
+/* Notification dropdown content */
+.dropdown-content.notification-dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #fff;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Show the dropdown when active */
+.notif-dropdown.show .dropdown-content.notification-dropdown {
+    display: block;
+    opacity: 1;
+}
+
+/* Header of the notifications section */
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.notification-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.mark-all-read {
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mark-all-read:hover {
+    color: #0056b3;
+}
+
+/* Notification item styling */
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Icon color: Make the icons white */
+.notification-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin-right: 10px;
+    display: inline-block;
+    color: #fff; /* Make icon white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Approved icon */
+.notification-icon-leave {
+    background-color: #28a745; /* Green color */
+}
+
+/* Rejected icon  */
+.notification-icon-rejected {
+    background-color: #dc3545; /* Red color */
+}
+
+/* Notification content */
+.notification-item .notification-content p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.notification-item .notification-time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* No notifications available */
+.notification-item.no-notifications {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+/* "View all notifications" link */
+.view-all-notifications {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.view-all-notifications:hover {
+    color: #0056b3;
+}
+
+
+.unread-count {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 50%;
+    display: none; 
+    min-width: 18px; 
+    text-align: center;
+}
+
+/* Show unread count when there are unread notifications */
+.icon.icon-notification .unread-count {
+    display: inline-block; /* Only display the unread count when needed */
+}
+
+/* Optional: If you want to display the unread count on hover */
+.icon.icon-notification:hover .unread-count {
+    display: inline-block;
+}
+
+
+/* Profile dropdown container */
+.Profile-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Adjust as needed to avoid it getting too close to the edge */
+}
+
+/* Profile button style (the circular button with the profile picture) */
+.Pdropdown-button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Profile icon inside the button */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Grow effect for profile button on hover */
+.Pdropdown-button:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown menu content (hidden by default) */
+.Pdropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensure it's placed below the profile button */
+    right: 0; /* Align it to the right of the button */
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the dropdown when active */
+.Profile-dropdown.show .Pdropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Dropdown link styling */
+.Pdropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for links in the dropdown */
+.Pdropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: #0073e6;
+}
+
+
+
+/* View all notif modal */
+
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999; /* Sit on top of all elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be adjusted */
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures proper stacking above other content */
+    z-index: 10000; /* Ensure it's above the modal background */
+}
+
+/* Close button */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button to clear notifications */
+.clear-notifications-btn {
+    background-color: #ff4500; /* Orange-red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.clear-notifications-btn:hover {
+    background-color: #ff6347; /* Slightly lighter */
+}
+
+/* Notification items */
+.notification-item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+
+
+/* Notification icon */
+.notification-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Notification content */
+.notification-content {
+    flex: 1;
+}
+
+.notification-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Modal notification content */
+.modal-notification-content {
+    max-height: 400px; /* Limit height */
+    overflow-y: auto; /* Scroll if needed */
+}
+
+/* Style for when there are no notifications */
+.modal-notification-content.no-notifications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it fills the content area */
+    font-size: 18px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* You can also style the "No notifications" message itself */
+.no-notifications-message {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
